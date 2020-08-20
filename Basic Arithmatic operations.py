@@ -5,7 +5,8 @@ Basic Arithmetic Operations:
     3. multiplication
     4. Division
     5. Modulus
-    6. Squares
+    6. Exponential (Squares)
+    7. Floor Division
 """
 
 # Arithmetic operations on two variables
@@ -16,7 +17,8 @@ print("Subtraction: {0} - {1} = {2}".format(a, b, a-b))
 print("Multiplication: {0} * {1} = {2}".format(a, b, a*b))
 print("Division: {0} / {1} = {2}".format(a, b, a/b))
 print("Modulus: {0} % {1} = {2}".format(a, b, a%b))
-print("Square: {0} ** {1} = {2}".format(a, b, a**b))
+print("Exponential: {0} ** {1} = {2}".format(a, b, a**b))
+print("Floor Division: {} // {} = {}".format(a, b, a // b))
 print("")
 
 # Declaring variables and verifying the types
