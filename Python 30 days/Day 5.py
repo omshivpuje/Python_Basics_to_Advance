@@ -112,11 +112,9 @@ In effect, the employees get paid 110% of their hourly wage for any overtime.
 """
 hours_worked = float(input("How many hours worked this week? "))
 hourly_wage = float(input("Hourly wage? "))
-overtime = 0
-payment = hourly_wage * 40
 
 if hours_worked > 40:
-    overtime = (hours_worked - 40) * 0.1 * hourly_wage
-    print(f"Employee is due some additional pay, The total amount due is ${(payment + overtime):.2f}.")
+    overtime = (hours_worked - 40) * 1.1 * hourly_wage
+    print(f"Employee is due some additional pay, The total amount due is ${(hourly_wage * 40) + overtime:.2f}.")
 else:
-    print(f"Employee's payment does not include overtime, the total amount due is ${payment:.2f}.")
+    print(f"Employee's payment does not include overtime, the total amount due is ${hourly_wage * hours_worked:.2f}.")
