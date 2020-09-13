@@ -42,7 +42,7 @@ stringified_numbers = []
 for number in numbers:
     stringified_numbers.append(str(number))
 
-print(f"{', '.join(stringified_numbers)}")
+print(f"{' | '.join(stringified_numbers)}")
 
 """
 3. Below you’ll find a short list of quotes:
@@ -78,5 +78,7 @@ so you’re going to have to process the string before you find its length.
 If you want to take this a little bit further, you an ask the user for a long piece of text.
 You can then tell them how many characters are in the text overall, and you can also provide them a word count.
 """
-words = input('Enter the words here: ').split()
-print(f"There are {len(words)} words in {words} in the provided sentence.")
+sentence = input('Enter the words here: ').strip()
+character_count = len(sentence)
+word_count = len(sentence.split())
+print(f"There are {character_count} characters and {word_count} words in {sentence}")
