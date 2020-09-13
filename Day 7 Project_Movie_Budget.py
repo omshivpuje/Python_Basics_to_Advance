@@ -38,6 +38,15 @@ movies = [
     ("Avengers: Endgame", 356000000),
     ("Incredibles 2", 200000000)
 ]
+
+new_movie_count = int(input("Enter how many new movies you wish to add: "))
+
+for _ in range(new_movie_count):
+    name = input("Enter new movie name: ")
+    budget = int(input("Enter new movie budget: "))
+    new_movie = (name, budget)
+    movies.append(new_movie)
+
 total_budget = 0
 for movie in movies:
     total_budget += movie[1]
@@ -47,7 +56,8 @@ avg_budget = total_budget/len(movies)
 high_budget_movies_count = 0
 for movie in movies:
     if movie[1] > avg_budget:
-        print(f"Movie {movie[0]} is having budget {movie[1]}, which is more than average budget {avg_budget}.")
+        over_average_cost = movie[1] - avg_budget
+        print(f"{movie[0]} cost ${movie[1]}: ${over_average_cost} over average.")
         high_budget_movies_count += 1
 
 
