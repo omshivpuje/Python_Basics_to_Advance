@@ -52,7 +52,7 @@ for movie in movies:
     total_budget += movie[1]
 
 
-avg_budget = total_budget/len(movies)
+avg_budget = int(total_budget/len(movies))
 high_budget_movies_count = 0
 for movie in movies:
     if movie[1] > avg_budget:
